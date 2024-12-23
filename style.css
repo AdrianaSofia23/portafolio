@@ -1,0 +1,341 @@
+/*General styles*/
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    outline: none;
+    color: black;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+}
+  
+ul li a:hover {
+    color: #756b6b;
+    font-style: normal; 
+}
+
+img{
+    background-color: red;
+}
+
+/*CONTAINER PRINCIPAL*/
+
+.container-principal{
+    display: flex;
+}
+
+/*CONTAINER*/
+
+.container-items {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: space-between; /* Separa el contenido */
+    height: 889px;
+    width: 280px;
+    margin: 10px 8px;
+    float: left; /* Opcional, si es necesario en tu diseño */
+}
+
+
+/*SIDE-BAR*/
+
+.side-bar{
+    margin-bottom: 30px; /* Añade un espacio de 20px debajo de cada div */
+    margin-top: 30px; /* Añade un espacio de 20px debajo de cada div */
+    width: 280px;
+}
+
+.menu{
+    margin-left: 17px;
+}
+
+.menu ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+
+}
+
+ul li{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-bottom: 40px; /* Añade un espacio de 10px dentro del elemento de la lista, debajo del contenido */
+}
+
+svg{
+    margin-right: 6px;
+}
+
+.submenu .item{
+   padding-top: 5px; 
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.has-submenu.active .submenu {
+    display: block;
+}
+
+/*LOGO*/
+
+.logo-os {
+    float: none;
+    margin-top: 40px; /* Añade un espacio de 20px debajo de cada div */
+    display: flex;
+    width:100%;
+    height:auto;
+}
+
+.logo-os .log{
+    object-fit: cover;
+    width:250px;
+    height:100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*SOCIAL WRAP*/
+
+.social-wrap {
+    margin-left: 15px; /* Mantiene el desplazamiento lateral */
+    /* Remueve margin-top para que lo controle Flexbox */
+}
+
+
+.footer{
+    margin-bottom: 5px;
+}
+
+.social-link{
+    display: block;
+    float: left;
+    height: auto;
+    width: 25px;
+    margin-left: 5px;
+    margin-right: 2px; 
+    margin-bottom: 5px;
+}
+
+.social .social-link a {
+    color: #49422a;
+    font-family: Benton Sans Book;
+    font-size: 11px;
+    font-weight: normal;
+    text-decoration: none; 
+}
+
+.social .social-link a:not(.social-share) {
+    height: 21px;
+    width: 21px;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    padding: 3px; 
+}
+
+.social .social-icon {
+    fill: #49422a;
+    height: 15px;
+    overflow: visible !important; 
+}
+
+/*AVATAR*/
+
+.avatar-img {
+    float: left;
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo para pantallas grandes */
+    margin: 50px auto; /* Centra la imagen horizontalmente */
+    margin-top: 100px;
+    margin-left: 35px;
+}
+
+.avatar-img img {
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Añade bordes redondeados si es necesario */
+}
+
+/*BIOGRAPHY*/
+
+.bio-text{
+    float: left;
+    height: auto;
+    width: 920px;
+    margin: 5px 5px;
+    display: flex;
+    font-size: 16px; /* Puedes usar px, em, rem, %, etc. */
+    line-height: 1.2; /* Ajusta el espaciado entre líneas */
+    letter-spacing: 0.5px; /* Ajusta el espaciado entre caracteres */
+    margin-left: 60px;
+    margin-top: 25px;
+
+}
+
+.container-bio{
+    font-family: 'evanescent.ttf';
+    font-size: 35px;
+}
+
+/* Define la fuente */
+@font-face {
+    font-family: 'evanescent.ttf';
+    src: url('Fonts/evanescent.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplica la fuente */
+body {
+    font-family: 'evanescent.ttf', sans-serif;
+    font-size: 29px;
+}
+
+
+/* Responsive Styles */
+
+@media screen and (max-width: 1024px) {
+    .container-items {
+        width: 100%;
+        height: auto;
+    }
+
+    .bio-text {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .avatar-img {
+        width: 100%;
+        max-width: 400px;
+        margin-left: 100px;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-principal {
+        flex-direction: column;
+    }
+
+    .container-items, .bio-text, .avatar-img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .avatar-img {
+        max-width: 300px;
+        margin-left: 40px;
+        margin-right: auto;
+        margin-top: 55px;
+    }
+
+    .container-bio {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-items, .bio-text, .avatar-img {
+        width: 100%;
+    }
+
+    .bio-text {
+        font-size: 12px;
+    }
+
+    .container-bio {
+        font-size: 20px;
+    }
+}
+
+
+/*SIDE-BAR (Mobile view)*/
+@media screen and (max-width: 768px) {
+    .container-items {
+        position: fixed;
+        top: 0;
+        left: -350px; /* Oculta la barra lateral fuera de la vista */
+        width: 280px;
+        height: 100%;
+        margin: 0;
+        padding: 20px;
+        background-color: #f7f7f7;
+        z-index: 1000;
+        transition: transform 0.13s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    /* When the sidebar is active */
+    .container-items.active {
+        transform: translateX(350px); /* Mueve la barra lateral dentro de la vista */
+    }
+
+    /* Overlay to darken the main content when sidebar is open */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    /* Show overlay when sidebar is active */
+    .overlay.active {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0; /* Ajuste el margen izquierdo del contenido principal */
+    }
+}
+
+/* General styling for menu-toggle button */
+.menu-toggle {
+    display: none; /* Oculta el botón por defecto */
+    position: fixed; /* Fija el botón en una posición específica en la pantalla */
+    top: 20px; /* Distancia desde la parte superior de la pantalla */
+    right: 20px; /* Distancia desde la parte izquierda de la pantalla */
+    background-color: #333; /* Color de fondo del botón */
+    color: white; /* Color del texto/icono */
+    border: none; /* Sin bordes */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño del icono o texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    z-index: 2000; /* Asegura que esté por encima de otros elementos */
+}
+
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+/* Opcional: Si prefieres que esté centrado */
+.menu-toggle.center {
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+}
+
+/* Mostrar los botones solo en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón en dispositivos móviles */
+    }
+}
